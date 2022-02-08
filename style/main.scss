@@ -1,0 +1,437 @@
+@import './colors';
+@import './mixins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62, 5%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 400px;
+	width: 100%;
+
+	&__form {
+		max-width: 600px;
+	}
+}
+
+.text-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 1em;
+	font-family: 'Hind', sans-serif;
+	color: $text-color;
+
+	&__header {
+		font-size: 1rem;
+	}
+
+	&__text {
+		margin-top: 0.5em;
+		font-family: 'Roboto', sans-serif;
+		font-size: 0.8rem;
+		color: $secondary-text-color;
+	}
+}
+
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+}
+
+.box-img {
+	grid-column: 4 / 10;
+	grid-row: 4 / 10;
+
+	z-index: -10;
+
+	img {
+		background-position: center;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 60%;
+	border: 3px solid $circle-color;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+.item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10%;
+	height: 10%;
+	margin: calc(-10% / 2);
+	background-color: $circle-color;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 10;
+
+	// &__one {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -90%);
+	// 	grid-column: 4 / 6;
+	// 	grid-row: 3 / 5;
+	// }
+
+	// &__two {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -90%);
+	// 	grid-column: 6 / 8;
+	// 	grid-row: 2 / 4;
+	// 	transform: translate(-50%, -45%);
+	// }
+
+	// &__three {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -90%);
+	// 	grid-column: 8 / 10;
+	// 	grid-row: 3 / 5;
+	// 	transform: translate();
+	// }
+
+	// &__four {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(0, -50%);
+	// 	grid-column: 9/11;
+	// 	grid-row: 4/6;
+	// }
+
+	// &__five {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	grid-column: 10 / 12;
+	// 	grid-row: 6 / 8;
+	// }
+
+	// &__six {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(0, -50%);
+	// 	grid-column: 9 / 11;
+	// 	grid-row: 8 / 10;
+	// }
+
+	// &__seven {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, 0%);
+	// 	grid-column: 8 / 10;
+	// 	grid-row: 9 / 11;
+	// }
+
+	// &__eight {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	grid-column: 6 / 8;
+	// 	grid-row: 10 / 12;
+	// }
+
+	// &__nine {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, 0);
+	// 	grid-column: 4 / 6;
+	// 	grid-row: 9 / 11;
+	// }
+
+	// &__ten {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(0, -50%);
+	// 	grid-column: 2 / 4;
+	// 	grid-row: 8 / 10;
+	// }
+
+	// &__eleven {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	grid-column: 2 / 4;
+	// 	grid-row: 6 / 8;
+	// }
+	// &__twelve {
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(0, -50%);
+	// 	grid-column: 2 / 4;
+	// 	grid-row: 4 / 6;
+	// }
+
+	img {
+		padding: 0.6em;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.text-link {
+	position: absolute;
+	font-size: 0.6rem;
+	text-decoration: none;
+	font-family: 'Hind', sans-serif;
+	font-weight: bold;
+	color: $link-color;
+
+	&__top {
+		bottom: 110%;
+	}
+
+	&__left {
+		right: 120%;
+	}
+
+	&__right {
+		left: 120%;
+	}
+
+	&__bottom {
+		top: 110%;
+	}
+}
+
+.form {
+	width: 100%;
+	background-color: $form-background;
+	background-image: url(../img/asset2.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.text-box-form {
+	background-color: $form-background;
+	color: $text-color-secondary;
+
+	&__header {
+		margin-top: 1em;
+		font-size: 1rem;
+	}
+
+	&__text {
+		margin-top: 0.5em;
+		font-size: 0.8em;
+		color: $text-color-secondary;
+	}
+}
+
+.form-box {
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	&__one {
+		grid-column: 1/2;
+		grid-row: 1 / 1;
+		@include formBox;
+	}
+	&__two {
+		grid-column: 2/3;
+		grid-row: 1 / 1;
+		@include formBox;
+	}
+	&__three {
+		grid-column: 3/4;
+		grid-row: 1 / 1;
+		@include formBox;
+	}
+	&__four {
+		grid-column: 1/2;
+		grid-row: 2 / 2;
+		@include formBox;
+	}
+	&__five {
+		grid-column: 2/3;
+		grid-row: 2 / 2;
+		@include formBox;
+	}
+	&__six {
+		grid-column: 3/4;
+		grid-row: 2 / 2;
+		@include formBox;
+	}
+
+	&__text-area {
+		grid-column: 1 / -1;
+		max-width: 100%;
+		min-width: 100%;
+		@include formBox;
+	}
+
+	&__checkbox {
+		margin-top: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			color: $text-color-third;
+			text-decoration: none;
+		}
+	}
+}
+
+.btn {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__send {
+		width: 12em;
+		height: 4em;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: $button-color;
+		border: none;
+		border-radius: 8px;
+		color: $text-color-secondary;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+}
+
+// ***********MEDIA QUERIES***********
+
+// ********************BREAKPOINT 768px********************
+@media (min-width: 768px) {
+	.wrapper {
+		max-width: 600px;
+
+		&__form {
+			max-width: 600px;
+		}
+	}
+
+	.text-box {
+		&__header {
+			font-size: 1.5rem;
+		}
+
+		&__text {
+			font-size: 0.8rem;
+		}
+	}
+
+	.text-link {
+		font-size: 0.8rem;
+	}
+
+	.text-box-form {
+		&__header {
+			font-size: 1.5rem;
+		}
+
+		&__text {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+// ********************BREAKPOINT 7992px********************
+
+@media (min-width: 768px) {
+	.wrapper {
+		max-width: 800px;
+
+		&__form {
+			max-width: 800px;
+		}
+	}
+
+	.text-box {
+		&__header {
+			font-size: 1.8rem;
+		}
+
+		&__text {
+			font-size: 0.9rem;
+		}
+	}
+
+	.text-link {
+		font-size: 0.9rem;
+	}
+
+	.text-box-form {
+		&__header {
+			font-size: 1.8rem;
+		}
+
+		&__text {
+			font-size: 0.9rem;
+		}
+	}
+}
+
+// ********************BREAKPOINT 1200px********************
+@media (min-width: 1200px) {
+	.wrapper {
+		max-width: 1200px;
+
+		&__form {
+			max-width: 1000px;
+		}
+	}
+
+	.text-box {
+		&__header {
+			font-size: 2rem;
+		}
+
+		&__text {
+			font-size: 1rem;
+		}
+	}
+
+	.text-link {
+		font-size: 1rem;
+	}
+
+	.text-box-form {
+		&__header {
+			font-size: 2rem;
+		}
+
+		&__text {
+			font-size: 1rem;
+		}
+	}
+}
+
+// ********************BREAKPOINT 1400px********************
+@media (min-width: 1400px) {
+	.text-link {
+		white-space: nowrap;
+	}
+}
