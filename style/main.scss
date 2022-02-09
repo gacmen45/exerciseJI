@@ -46,13 +46,16 @@ body {
 .container {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(12, 1fr);
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
 }
 
 .box-img {
-	grid-column: 4 / 10;
-	grid-row: 4 / 10;
+	grid-column: 3 / 9;
+	grid-row: 3 / 9;
 
 	z-index: -10;
 
@@ -68,8 +71,8 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 60%;
-	height: 60%;
+	width: 75%;
+	height: 75%;
 	border: 3px solid $circle-color;
 	border-radius: 50%;
 	z-index: 10;
@@ -91,103 +94,6 @@ body {
 	cursor: pointer;
 	z-index: 10;
 
-	// &__one {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -90%);
-	// 	grid-column: 4 / 6;
-	// 	grid-row: 3 / 5;
-	// }
-
-	// &__two {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -90%);
-	// 	grid-column: 6 / 8;
-	// 	grid-row: 2 / 4;
-	// 	transform: translate(-50%, -45%);
-	// }
-
-	// &__three {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -90%);
-	// 	grid-column: 8 / 10;
-	// 	grid-row: 3 / 5;
-	// 	transform: translate();
-	// }
-
-	// &__four {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(0, -50%);
-	// 	grid-column: 9/11;
-	// 	grid-row: 4/6;
-	// }
-
-	// &__five {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	grid-column: 10 / 12;
-	// 	grid-row: 6 / 8;
-	// }
-
-	// &__six {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(0, -50%);
-	// 	grid-column: 9 / 11;
-	// 	grid-row: 8 / 10;
-	// }
-
-	// &__seven {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, 0%);
-	// 	grid-column: 8 / 10;
-	// 	grid-row: 9 / 11;
-	// }
-
-	// &__eight {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	grid-column: 6 / 8;
-	// 	grid-row: 10 / 12;
-	// }
-
-	// &__nine {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, 0);
-	// 	grid-column: 4 / 6;
-	// 	grid-row: 9 / 11;
-	// }
-
-	// &__ten {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(0, -50%);
-	// 	grid-column: 2 / 4;
-	// 	grid-row: 8 / 10;
-	// }
-
-	// &__eleven {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	grid-column: 2 / 4;
-	// 	grid-row: 6 / 8;
-	// }
-	// &__twelve {
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(0, -50%);
-	// 	grid-column: 2 / 4;
-	// 	grid-row: 4 / 6;
-	// }
-
 	img {
 		padding: 0.6em;
 		max-width: 100%;
@@ -204,7 +110,7 @@ body {
 	color: $link-color;
 
 	&__top {
-		bottom: 110%;
+		bottom: 100%;
 	}
 
 	&__left {
